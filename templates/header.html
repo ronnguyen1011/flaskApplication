@@ -1,0 +1,47 @@
+<!--
+ Name: Ron Nguyen
+ Date: Feb. 5, 2023
+ Description: This is a header file to make the other html file shorter.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/styles.css') }}"
+    />
+    <title>Software Development Intern Application</title>
+  </head>
+  <body class="lightgrey">
+    <nav class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-8">
+          <p><a class="noneDecor" href="homePage">GameWorld LLC</a></p>
+          <h5>
+            <a class="noneDecor" href="homePage"
+              >Software Development Internship</a
+            >
+          </h5>
+          <p>Kent Washington, Paid 12 weeks</p>
+        </div>
+        <div class="col-12 col-sm-4">
+          <a role="button" class="button btn btn-primary" href="admin">
+            Admin
+          </a>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

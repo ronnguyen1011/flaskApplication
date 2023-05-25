@@ -5,72 +5,114 @@
  and job info.
  -->
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">        <title>Software Development Intern Application</title>
-    </head>
-    <body>
-        <nav class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-sm-8">
-                    <p><a class="noneDecor" href="homePage">GameWorld LLC</a></p>
-                    <h5><a class="noneDecor" href="homePage">Software Development Internship</a></h5>
-                    <p>Kent Washington, Paid 12 weeks</p>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <a role="button" class="button btn btn-primary" href="admin"> Admin </a>
-                    <a role="button" class="button btn btn-primary" href="personalInfo"> Apply Now</a>
-                </div>
-            </div>
-        </nav>
-        <div class="container-fluid lightgray">
-            <div class="row lightgrey">
-                <div class="col-12 col-sm-6">
-                    <div class="row lightgrey">
-                        <h2 class="text-center">About the Internship</h2>
-                        <hr class="line">
-                        <p>We are searching for a motivated student software development for
-                            an IOS and Android development internship</p>
-                        <h2 class="text-center">More About Us</h2>
-                        <hr class="line">
-                            <p>The products we build have a positive impact on people's lives
-                            and the world around us. If you are just standing your journey in
-                            software development, or if you are a seasoned pro, we have a
-                            place for you here. Our apps are used all around the world, so
-                            you will have an opportunity here to learn and grow in an
-                            environment where millions of people every day interact with our technology.</p>
-                            <p>Our top paid CEOs don't rake in the cash at your expense, and our shareholders
-                            only get a dividend. This enables us to pay our
-                            employees with the best wages and benefits imaginable.
-                            We don't offer merely "competitive" wages, we pay each
-                            employee the largest cut of product of their labor. Also,
-                            unlike our competitors, we don't manipulate our users or sell their data to stay in business.
-                            Truly a cutting edge company, you will love working here!</p>
-                        <h2 class="text-center">Meet Our Team</h2>
-                        <hr class="line">
-                            <p class="quotes">"Come work for a company where all of our teams enjoys the autonomy to do their own
-                            decision-making." - Sara, CEO.</p>
-                            <p class="quotes">"This company is unique, we all own the efforts of our labor,
-                            upper management exist only to facilitate our success." - Marshall, President</p>
-                            <p class="quotes">"Everyone makes a difference here, we are constantly
-                            improving and evolving." - Helin, Senior Developer</p>
-                        <hr class="line">
-                    </div>
-                    <div class="pad">
-                        <a role="button" class="button2 btn btn-primary" href="personalInfo"> Apply Now</a>
-                    </div>
-
-                </div>
-                <div class="col-12 col-sm-6 ht">
-                    <img class="round" src="{{ url_for('static', filename='images/office.jpg') }}" alt="office picture">
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/styles.css') }}"
+    />
+    <title>Software Development Intern Application</title>
+  </head>
+  <body>
+    <nav class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-8">
+          <p><a class="noneDecor" href="homePage">GameWorld LLC</a></p>
+          <h5>
+            <a class="noneDecor" href="homePage"
+              >Software Development Internship</a
+            >
+          </h5>
+          <p>Kent Washington, Paid 12 weeks</p>
         </div>
-    </body>
+        <div class="col-12 col-sm-4">
+          <a role="button" class="button btn btn-primary" href="admin">
+            Admin
+          </a>
+          <a role="button" class="button btn btn-primary" href="personalInfo">
+            Apply Now</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid lightgray">
+      <div class="row lightgrey">
+        <div class="col-12 col-sm-6">
+          <div class="row lightgrey">
+            <h2 class="text-center">About the Internship</h2>
+            <hr class="line" />
+            <p>
+              We are searching for a motivated student software development for
+              an IOS and Android development internship
+            </p>
+            <h2 class="text-center">More About Us</h2>
+            <hr class="line" />
+            <p>
+              The products we build have a positive impact on people's lives and
+              the world around us. If you are just standing your journey in
+              software development, or if you are a seasoned pro, we have a
+              place for you here. Our apps are used all around the world, so you
+              will have an opportunity here to learn and grow in an environment
+              where millions of people every day interact with our technology.
+            </p>
+            <p>
+              Our top paid CEOs don't rake in the cash at your expense, and our
+              shareholders only get a dividend. This enables us to pay our
+              employees with the best wages and benefits imaginable. We don't
+              offer merely "competitive" wages, we pay each employee the largest
+              cut of product of their labor. Also, unlike our competitors, we
+              don't manipulate our users or sell their data to stay in business.
+              Truly a cutting edge company, you will love working here!
+            </p>
+            <h2 class="text-center">Meet Our Team</h2>
+            <hr class="line" />
+            <p class="quotes">
+              "Come work for a company where all of our teams enjoys the
+              autonomy to do their own decision-making." - Sara, CEO.
+            </p>
+            <p class="quotes">
+              "This company is unique, we all own the efforts of our labor,
+              upper management exist only to facilitate our success." -
+              Marshall, President
+            </p>
+            <p class="quotes">
+              "Everyone makes a difference here, we are constantly improving and
+              evolving." - Helin, Senior Developer
+            </p>
+            <hr class="line" />
+          </div>
+          <div class="pad">
+            <a
+              role="button"
+              class="button2 btn btn-primary"
+              value="Sign in"
+              href="personalInfo"
+            >
+              Apply Now</a
+            >
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 ht">
+          <img
+            class="round"
+            src="{{ url_for('static', filename='images/office.jpg') }}"
+            alt="office picture"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
