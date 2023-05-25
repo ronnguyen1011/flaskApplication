@@ -1,0 +1,52 @@
+<!--
+ Name: Ron Nguyen
+ Date: Feb. 5, 2023
+ Description: This file will display all the information that the applicant typed and selected
+
+ -->
+
+<include href="views/header.html"></include>
+<div class="row padTop">
+    <div class="col-12 col-sm-6 box">
+        <p class="fSize">Name: {{@SESSION.applicant->getFname()}} {{@SESSION.applicant->getLname()}}</p>
+        <hr class="line">
+        <p class="fSize">Email: {{@SESSION.applicant->getEmail()}}</p>
+        <hr class="line">
+        <p class="fSize">State: {{@SESSION.applicant->getState()}}</p>
+        <hr class="line">
+        <p class="fSize">Phone: {{@SESSION.applicant->getPhone()}}</p>
+        <hr class="line">
+        <p class="fSize">Github Link: {{@SESSION.applicant->getGithub()}}</p>
+        <hr class="line">
+        <p class="fSize">Experience: {{@SESSION.applicant->getExperience()}} years</p>
+        <hr class="line">
+        <p class="fSize">Willing to relocate: {{@SESSION.applicant->getRelocate()}}</p>
+        <hr class="line">
+        <p class="fSize">Mailing Lists:
+            <check if="{{@SESSION.applicant instanceof Applicant_SubscribedToLists}}">
+        <span class="fSize">{{@SESSION.applicant->getSelectionJobs()}}, {{@SESSION.applicant->getSelectionVerticals()}}.</span>
+        </check>
+        </p>
+        <hr class="line">
+        <!--<p class="fSize">Mailing Lists: {%if {{@SESSION.mailingListSU}} == "1"%} {{@SESSION.applicant->getSelectionJobs()}}, {{@SESSION.applicant->getSelectionVerticals()}} {%endif%}</p> -->
+    </div>
+    <div class="col-12 col-sm-6">
+        <img class="round" src="images/avatar.png" alt="profile picture icon">
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-sm-6"><p></p></div>
+    <div class="col-12 col-sm-6">
+        <p class="padLR"><strong>Summary</strong></p>
+        <p class="fSize padLR">{{@SESSION.applicant->getBio()}} </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-sm-3"></div>
+    <div class="col-12 col-sm-6">
+        <button class="nextButton btn btn-primary padLR" type="submit">Submit my application!</button>
+    </div>
+    <div class="col-12 col-sm-3"></div>
+</div>
+</body>
+</html>

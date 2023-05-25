@@ -1,0 +1,56 @@
+<!--
+ Name: Ron Nguyen
+ Date: Feb. 5, 2023
+ Description: This is experience page will gather user's biography, git link, year experience, and willing
+ to locate information
+
+ -->
+
+<include href="views/header.html"></include>
+    <div class="container-fluid lightgrey">
+        <h2 >Personal Information</h2>
+        <hr class="line">
+
+        <form action="#" method="post" class="form-horizontal">
+            <div class="row">
+                <div class="col-12 col-sm-8">
+                    <label for="biography"><strong>Biography</strong></label><br>
+                    <textarea id="biography" name="biography" rows="9"></textarea>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="row">
+                        <label for="gitLink"><strong>Github Link: </strong></label>
+                        <input type="text" id="gitLink" name="gitLink" placeholder="https://github.com/my_github">
+                        <check if="{{ isset(@errors['gitLink'])}}">
+                            <span class="err text-center">{{ @errors['gitLink'] }}</span>
+                        </check>
+                    </div>
+                    <div class="row">
+                        <p class="exPad"><strong>Year Experience</strong><br></p>
+                        <repeat group="{{ @yearExperience }}" value="{{ @yearExperience }}">
+                            <div class="radio col-12 col-sm-4">
+                            <label><input type="radio" name="yearExperience" value="{{ @yearExperience }}"> {{ ucfirst(@yearExperience) }}</label><br>
+                            </div>
+                        </repeat>
+                        <check if="{{ isset(@errors['year'])}}">
+                            <span class="err text-center">{{ @errors['year'] }}</span>
+                        </check>
+                    </div>
+                    <div class="row">
+                        <p class="exPad"><strong>Willing to relocate</strong><br></p>
+
+                        <repeat group="{{ @relocates }}" value="{{ @relocates }}">
+                            <div class="radio col-12 col-sm-4">
+                                <label><input type="radio" name="relocates" value="{{ @relocates }}"> {{ ucfirst(@relocates) }}</label><br>
+                            </div>
+                        </repeat>
+                    </div>
+                    <div class="row exPad">
+                        <button class="nextButton btn btn-primary" type="submit">Next ></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
