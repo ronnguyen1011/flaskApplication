@@ -4,41 +4,36 @@
  Description: This file will display all the information that the applicant typed and selected
 
  -->
-
-<include href="views/header.html"></include>
+ {% include 'header.html' %}
 <div class="row padTop">
     <div class="col-12 col-sm-6 box">
-        <p class="fSize">Name: {{@SESSION.applicant->getFname()}} {{@SESSION.applicant->getLname()}}</p>
+        <p class="fSize">Name: {{ fname }}</p>
         <hr class="line">
-        <p class="fSize">Email: {{@SESSION.applicant->getEmail()}}</p>
+        <p class="fSize">Email: </p>
         <hr class="line">
-        <p class="fSize">State: {{@SESSION.applicant->getState()}}</p>
+        <p class="fSize">State: </p>
         <hr class="line">
-        <p class="fSize">Phone: {{@SESSION.applicant->getPhone()}}</p>
+        <p class="fSize">Phone: </p>
         <hr class="line">
-        <p class="fSize">Github Link: {{@SESSION.applicant->getGithub()}}</p>
+        <p class="fSize">Github Link: </p>
         <hr class="line">
-        <p class="fSize">Experience: {{@SESSION.applicant->getExperience()}} years</p>
+        <p class="fSize">Experience: years</p>
         <hr class="line">
-        <p class="fSize">Willing to relocate: {{@SESSION.applicant->getRelocate()}}</p>
+        <p class="fSize">Willing to relocate:</p>
         <hr class="line">
         <p class="fSize">Mailing Lists:
-            <check if="{{@SESSION.applicant instanceof Applicant_SubscribedToLists}}">
-        <span class="fSize">{{@SESSION.applicant->getSelectionJobs()}}, {{@SESSION.applicant->getSelectionVerticals()}}.</span>
-        </check>
+    
         </p>
         <hr class="line">
-        <!--<p class="fSize">Mailing Lists: {%if {{@SESSION.mailingListSU}} == "1"%} {{@SESSION.applicant->getSelectionJobs()}}, {{@SESSION.applicant->getSelectionVerticals()}} {%endif%}</p> -->
     </div>
     <div class="col-12 col-sm-6">
-        <img class="round" src="images/avatar.png" alt="profile picture icon">
+        <img class="round" src="/static/images/avatar.png" alt="profile picture icon">
     </div>
 </div>
 <div class="row">
     <div class="col-12 col-sm-6"><p></p></div>
     <div class="col-12 col-sm-6">
         <p class="padLR"><strong>Summary</strong></p>
-        <p class="fSize padLR">{{@SESSION.applicant->getBio()}} </p>
     </div>
 </div>
 <div class="row">
