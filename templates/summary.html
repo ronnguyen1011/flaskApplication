@@ -5,36 +5,35 @@
 
  -->
  {% include 'header.html' %}
-<div class="row padTop">
+ <div class="row padTop">
     <div class="col-12 col-sm-6 box">
-        <p class="fSize">Name: {{ first_name }} {{last_name }}</p>
+        <p class="fSize">Name: {{ user_info.first_name }} {{ user_info.last_name }}</p>
         <hr class="line">
-        <p class="fSize">Email:{{ email }} </p>
+        <p class="fSize">Email:{{ user_info.email }}</p>
         <hr class="line">
-        <p class="fSize">State:{{ state }} </p>
+        <p class="fSize">State:{{ user_info.state }}</p>
         <hr class="line">
-        <p class="fSize">Phone: {{ phone }} </p>
+        <p class="fSize">Phone: {{ user_info.phone }}</p>
         <hr class="line">
-        <p class="fSize">Github Link: {{gitlink}} </p>
+        <p class="fSize">Github Link: {{ user_info.git_link }}</p>
         <hr class="line">
-        <p class="fSize">Experience: years {{year}}</p>
+        <p class="fSize">Experience: years {{ user_info.year }}</p>
         <hr class="line">
-        <p class="fSize">Willing to relocate: {{experience}}</p>
+        <p class="fSize">Willing to relocate: {{ user_info.experience }}</p>
         <hr class="line">
-        <p class="fSize">Mailing Lists: {{jobs}} {{industry}}
-    
-        </p>
+        <p class="fSize">Mailing Lists: {{ user_info.jobs }} {{ user_info.industry }}</p>
         <hr class="line">
     </div>
     <div class="col-12 col-sm-6">
         <img class="round" src="/static/images/avatar.png" alt="profile picture icon">
     </div>
 </div>
+
 <div class="row">
     <div class="col-12 col-sm-6"><p></p></div>
     <div class="col-12 col-sm-6">
         <p class="padLR"><strong>Summary</strong></p>
-        <p>{{bio}}</p>
+        <p>{{ user_info.biography }}</p>
     </div>
 </div>
 <div class="row">
