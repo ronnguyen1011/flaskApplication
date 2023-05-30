@@ -13,7 +13,6 @@
 
         <form action="/experience" method="POST" class="form-horizontal">
             <div class="row">
-                <h1> {{name}}</h1>
                 <div class="col-12 col-sm-8">
                     <label for="biography"><strong>Biography</strong></label><br>
                     <textarea id="biography" name="biography" rows="9"></textarea>
@@ -25,9 +24,19 @@
                     </div>
                     <div class="row">
                         <p class="exPad"><strong>Year Experience</strong><br></p>
+                        <input type="radio" id="html" name="fav_language" value="0 - 2">
+                        <label for="html">0 - 2</label><br>
+                        <input type="radio" id="css" name="fav_language" value="2 - 4">
+                        <label for="css">2 - 4</label><br>
+                        <input type="radio" id="javascript" name="fav_language" value="4 +">
+                        <label for="javascript">4 +</label>
                     </div>
                     <div class="row">
                         <p class="exPad"><strong>Willing to relocate</strong><br></p>
+                        <input type="radio" id="html" name="fav_language1" value="Yes">
+                        <label for="html">Yes</label><br>
+                        <input type="radio" id="css" name="fav_language1" value="No">
+                        <label for="css">No</label><br>
                     </div>
                     <div class="pad">
                         <input type="submit" value="Submit" />

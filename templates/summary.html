@@ -7,21 +7,21 @@
  {% include 'header.html' %}
 <div class="row padTop">
     <div class="col-12 col-sm-6 box">
-        <p class="fSize">Name: {{ data }}</p>
+        <p class="fSize">Name: {{ first_name }} {{last_name }}</p>
         <hr class="line">
-        <p class="fSize">Email: </p>
+        <p class="fSize">Email:{{ email }} </p>
         <hr class="line">
-        <p class="fSize">State: </p>
+        <p class="fSize">State:{{ state }} </p>
         <hr class="line">
-        <p class="fSize">Phone: </p>
+        <p class="fSize">Phone: {{ phone }} </p>
         <hr class="line">
-        <p class="fSize">Github Link: </p>
+        <p class="fSize">Github Link: {{gitlink}} </p>
         <hr class="line">
-        <p class="fSize">Experience: years</p>
+        <p class="fSize">Experience: years {{year}}</p>
         <hr class="line">
-        <p class="fSize">Willing to relocate:</p>
+        <p class="fSize">Willing to relocate: {{experience}}</p>
         <hr class="line">
-        <p class="fSize">Mailing Lists:
+        <p class="fSize">Mailing Lists: {{jobs}} {{industry}}
     
         </p>
         <hr class="line">
@@ -34,13 +34,14 @@
     <div class="col-12 col-sm-6"><p></p></div>
     <div class="col-12 col-sm-6">
         <p class="padLR"><strong>Summary</strong></p>
+        <p>{{bio}}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-12 col-sm-3"></div>
-    <div class="col-12 col-sm-6">
-        <button class="nextButton btn btn-primary padLR" type="submit">Submit my application!</button>
-    </div>
+    <div class="pad">
+        <input type="submit" value="Submit" />
+      </div>
     <div class="col-12 col-sm-3"></div>
 </div>
 </body>
