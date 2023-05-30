@@ -3,8 +3,11 @@ from flask import Flask, redirect, render_template, url_for, session, request
 app = Flask(__name__)
 app.secret_key = "123123"  # Set a secret key for session encryption
 
+@app.route("/")
+def home():
+    return render_template("home.html")
 
-@app.route("/", methods=["GET"])
+@app.route("/personalInfo", methods=["GET"])
 def show_form():
     return render_template("personalInfo.html")
 

@@ -1,19 +1,14 @@
-# Example model class
-class User:
-    def __init__(self, id, username, email):
-        self.id = id
-        self.username = username
+class UserInfo:
+    def __init__(self, first_name, last_name, email, state, phone, ml_signup, biography, git_link, year, experience, jobs, industry):
+        self.first_name = first_name
+        self.last_name = last_name
         self.email = email
-
-    def save(self):
-        # Logic to save the user to the database
-        pass
-
-    def delete(self):
-        # Logic to delete the user from the database
-        pass
-
-    @staticmethod
-    def get_all():
-        # Logic to fetch all users from the database
-        pass
+        self.state = state
+        self.phone = phone
+        self.ml_signup = ml_signup
+        self.biography = biography
+        self.git_link = git_link
+        self.year = year
+        self.experience = experience
+        self.jobs = jobs
+        self.industry = industry
