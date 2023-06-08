@@ -12,6 +12,7 @@ def home():
 def show_form_route():
     return show_form()
 
+
 @app.route("/", methods=["POST"])
 def process_form_route():
     return process_form()

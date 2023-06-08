@@ -1,5 +1,18 @@
 from flask import render_template, redirect, url_for, session, request
 from models import UserInfo
+import mysql.connector
+
+connection = mysql.connector.connect(
+    host="zhenhuaizeng.greenriverdev.com",
+    database="zhenhuai_grcc",
+    user="zhenhuai_test",
+    password="134asdZXC",
+)
+
+
+cursor = connection.cursor()
+
+
 
 def show_form():
     return render_template("personalInfo.html")
@@ -12,13 +25,29 @@ def process_form():
     phone = request.form.get("phone")
     ml_signup = bool(request.form.get("MLSignUp"))
 
-    session["first_name"] = first_name
-    session["last_name"] = last_name
-    session["email"] = email
-    session["state"] = state
-    session["phone"] = phone
-    session["ml_signup"] = ml_signup
-    return redirect(url_for("experience_route"))
+    # Validation start
+    errors = []
+    if not first_name:
+        errors.append('Please enter your username')
+    if not last_name:
+        errors.append("Please enter your pasword")
+    if errors:
+        return render_template("personalInfo.html",errors = errors)
+    else:
+        cur = cursor
+        cur.execute("INSERT INTO applicant (firstname,lastname) VALUES (%s, %s)",(first_name,last_name))
+        session["first_name"] = first_name
+        session["last_name"] = last_name
+        session["email"] = email
+        session["state"] = state
+        session["phone"] = phone
+        session["ml_signup"] = ml_signup
+
+        return redirect(url_for("experience_route"))
+    # Validation end
+
+    
+
 
 def experience():
     return render_template("experience.html")
@@ -59,7 +88,10 @@ def summary():
         year=session["fav_language"],
         experience=session["fav_language1"],
         jobs=session["jobs"],
-        industry=session["Industry"]
+        industry=session["Industry"],
     )
+    cur = cursor
+    users = cur.execute("SELECT * FROM applicant")
+    userDetails = cur.fetchall()
 
-    return render_template("summary.html", user_info=user_info)
+    return render_template("summary.html", user_info=user_info, userDetails=userDetails,users=users)
