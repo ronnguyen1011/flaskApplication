@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, url_for, session, request
-from views import show_form, process_form, experience, save_data, mailing_list, mailing_list_data, summary
+from views import show_form, process_form, experience, save_data, mailing_list, mailing_list_data, summary, admin_page
 
 app = Flask(__name__)
 app.secret_key = "123123"  # Set a secret key for session encryption
@@ -37,5 +37,9 @@ def mailing_list_data_route():
 def summary_route():
     return summary()
 
+@app.route("/admin")
+def admin_route():
+    return admin_page()
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=3001)

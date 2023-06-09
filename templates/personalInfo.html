@@ -16,13 +16,27 @@
                 <div class="col-12 col-sm-8">
                     <div class="row">
                         <div class="col-12 col-sm-6">
-                            <label for="fname"><strong>First Name:</strong></label><br>
-                            <input type="text" id="fname" name="fname"><br>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <label for="lname"><strong>Last name:</strong></label><br>
-                            <input type="text" id="lname" name="lname">
-                        </div>
+                        <label for="fname"><strong>First Name:</strong></label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        {% if errors %}
+                            {% if 'Please enter your first name' in errors %}
+                                <p class="err">Please enter your first name</p>
+                            {% elif 'First name should only contain letters' in errors %}
+                                <p class="err">First name should only contain letters</p>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="lname"><strong>Last name:</strong></label><br>
+                        <input type="text" id="lname" name="lname">
+                        {% if errors %}
+                            {% if 'Please enter your last name' in errors %}
+                                <p class="err">Please enter your last name</p>
+                            {% elif 'Last name should only contain letters' in errors %}
+                                <p class="err">Last name should only contain letters</p>
+                            {% endif %}
+                        {% endif %}
+                    </div>
                     </div>
                     <div class="row">
                         <div class="col-12">

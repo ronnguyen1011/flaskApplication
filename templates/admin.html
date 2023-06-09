@@ -1,0 +1,36 @@
+{% include 'header.html' %}
+    <h1>Applicants</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>State</th>
+            <th>Phone</th>
+            <th>ML Signup</th>
+            <th>Biography</th>
+            <th>Git Link</th>
+            <th>Year</th>
+            <th>Experience</th>
+            <th>Mailing List</th>
+        </tr>
+        {% for applicant in applicants %}
+        <tr>
+            <td>{{ applicant[0] }}</td>
+            <td>{{ applicant[1] }}</td>
+            <td>{{ applicant[2] }}</td>
+            <td>{{ applicant[3] }}</td>
+            <td>{{ applicant[4] }}</td>
+            <td>{{ applicant[5] }}</td>
+            <td>{{ applicant[6] }}</td>
+            <td>{{ applicant[7] }}</td>
+            <td>{{ applicant[8] }}</td>
+            <td>{{ applicant[9] }}</td>
+            <td>{{ applicant[10] }}</td>
+            <td>{{ applicant[11] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
